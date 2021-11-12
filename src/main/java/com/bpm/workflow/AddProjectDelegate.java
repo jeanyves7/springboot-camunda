@@ -31,6 +31,7 @@ public class AddProjectDelegate implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         LOGGER.info("received project of ");
         HashMap<String,String> projectMap = (HashMap<String, String>) delegateExecution.getVariable("project");
+
         Set<String> keys =  projectMap.keySet();
         ArrayList<String> values=new ArrayList<>();
         for (String key : keys) {
