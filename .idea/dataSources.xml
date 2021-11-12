@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="camundaworkflow@localhost" uuid="6eac5cb5-a5e3-4c8a-a814-4221e4876d9f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/camundaworkflow</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="yrsugaqs@tai.db.elephantsql.com" uuid="cc40b7b7-9903-4237-b722-8d37ede4d8ee">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://tai.db.elephantsql.com/yrsugaqs</jdbc-url>
+    </data-source>
+  </component>
+</project>
