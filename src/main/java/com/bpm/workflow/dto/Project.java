@@ -6,44 +6,41 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "project")
-public class Project  {
+public class Project {
 
-    @Column(name="name")
-    private String name;
+    @Column(name = "name")
+    private String name = "";
 
-    @Column(name="email")
-    private String email;
+    @Column(name = "email")
+    private String email = "";
 
-    @Column(name="description")
-    private String description;
+    @Column(name = "description")
+    private String description = "";
 
-    @Column(name="isvalidated")
-    private boolean isValidated=false;
+    @Column(name = "isvalidated")
+    private boolean isValidated = false;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 
-
-    public Project(String name, String description,String email) {
+    public Project(String name, String description, String email) {
         this.name = name;
         this.description = description;
-        this.email=email;
+        this.email = email;
     }
 
     public Project() {
-        this.name = "";
-        this.description = "";
 
     }
 
-    public  void setName(String name){
-        this.name=name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setDescription(String description){
-        this.description=description;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getName() {
@@ -63,10 +60,11 @@ public class Project  {
         return id;
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return this.email;
     }
-    public void setEmail(String email){
-        this.email=email;
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
