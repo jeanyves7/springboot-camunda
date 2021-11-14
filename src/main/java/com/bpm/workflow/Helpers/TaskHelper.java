@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class TaskHelper {
 
-    public  Project getProject(DelegateExecution delegateExecution){
+    public static Project getProject(DelegateExecution delegateExecution){
         HashMap<String,String> projectMap = (HashMap<String, String>) delegateExecution.getVariable("project");
         Set<String> keys =  projectMap.keySet();
         ArrayList<String> values=new ArrayList<>();
@@ -19,6 +19,9 @@ public class TaskHelper {
         return new Project(values.get(0),values.get(1),values.get(2));
     }
 
+    public static boolean ValidateProject(Project project){
+        return true;
+    };
 
 
 }

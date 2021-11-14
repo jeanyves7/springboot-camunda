@@ -20,7 +20,7 @@ public class AddProjectDelegate implements JavaDelegate {
 
     private  final SendMailService service;
     private final Logger LOGGER = LoggerFactory.getLogger(AddProjectDelegate.class.getName());
-    private  final TaskHelper taskHelper=new  TaskHelper();
+
 
 
     @Autowired
@@ -34,7 +34,7 @@ public class AddProjectDelegate implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         LOGGER.info("received project of ");
 
-        Project project= taskHelper.getProject(delegateExecution);
+        Project project= TaskHelper.getProject(delegateExecution);
         this.projectsRepository.save(project);
 
         Mail mail=new Mail(project.getEmail(),"Project Deposition","Your project has been deposed");
