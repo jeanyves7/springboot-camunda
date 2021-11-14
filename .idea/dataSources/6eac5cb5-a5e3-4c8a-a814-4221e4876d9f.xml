@@ -684,7 +684,7 @@ true Pacific/Easter
 false Pacific/Efate
 false Pacific/Enderbury
 false Pacific/Fakaofo
-false Pacific/Fiji
+true Pacific/Fiji
 false Pacific/Funafuti
 false Pacific/Galapagos
 false Pacific/Gambier
@@ -1320,7 +1320,7 @@ true posix/Pacific/Easter
 false posix/Pacific/Efate
 false posix/Pacific/Enderbury
 false posix/Pacific/Fakaofo
-false posix/Pacific/Fiji
+true posix/Pacific/Fiji
 false posix/Pacific/Funafuti
 false posix/Pacific/Galapagos
 false posix/Pacific/Gambier
@@ -1380,19 +1380,20 @@ false posix/WET
 false posix/Zulu
 false posixrules
 </TimeZones>
-      <StartupTime>1636731091</StartupTime>
+      <StartupTime>1636912785</StartupTime>
     </root>
     <database id="2" parent="1" name="camundaworkflow">
       <ObjectId>16385</ObjectId>
       <Owner>docker</Owner>
-      <IntrospectionStateNumber>887</IntrospectionStateNumber>
+      <IntrospectionStateNumber>896</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|17148|17149|1
+      <Relations>sequence|table|17155|17156|1
 </Relations>
     </database>
     <database id="3" parent="1" name="docker">
       <ObjectId>16384</ObjectId>
       <Owner>docker</Owner>
+      <IntrospectionStateNumber>892</IntrospectionStateNumber>
     </database>
     <database id="4" parent="1" name="postgres">
       <ObjectId>13757</ObjectId>
@@ -1457,7 +1458,6 @@ false posixrules
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>docker</Owner>
-      <IntrospectionStateNumber>886</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="20" parent="2" name="heap">

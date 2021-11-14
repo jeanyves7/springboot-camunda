@@ -4,7 +4,7 @@
     <bpmn:startEvent id="Event_11wgoud" name="Process started">
       <bpmn:outgoing>Flow_14au6l9</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:serviceTask id="Activity_0i9qsbx" name="Add project" camunda:class="com.bpm.workflow.AddProjectDelegate">
+    <bpmn:serviceTask id="Activity_0i9qsbx" name="Add project" camunda:class="com.bpm.workflow.camundaServiceTask.AddProjectDelegate">
       <bpmn:incoming>Flow_14au6l9</bpmn:incoming>
       <bpmn:outgoing>Flow_0yc1b0m</bpmn:outgoing>
     </bpmn:serviceTask>

@@ -133,19 +133,17 @@
 </head>
 <body>
 <div class="main-block">
-    <h1>Registration</h1>
-    <form >
+    <h1>Project Deposition</h1>
+    <form>
         <hr>
         <hr>
-
         <input type="text" name="names" id="Names" placeholder="Name" required/>
         <label id="icon" for="desc"><i class="fas fa-user"></i></label>
         <input type="text" name="desc" id="desc" placeholder="Description" required/>
-
-
+        <input type="text" name="names" id="Email" placeholder="Email" required/>
         <hr>
         <div class="btn-block">
-            <button  onclick = "sendPost(document.getElementById('Names'),document.getElementById('desc'))">Submit</button>
+            <button  onclick = "sendPost(document.getElementById('Names'),document.getElementById('desc'),document.getElementById('Email'))">Submit</button>
         </div>
     </form>
 </div>

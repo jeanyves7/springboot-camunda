@@ -2,7 +2,6 @@ package com.bpm.workflow.dto;
 
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 
 @Entity
@@ -11,19 +10,26 @@ public class Project  {
 
     @Column(name="name")
     private String name;
+
+    @Column(name="email")
+    private String email;
+
     @Column(name="description")
     private String description;
+
     @Column(name="isvalidated")
     private boolean isValidated=false;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 
 
-    public Project(String name, String description) {
+    public Project(String name, String description,String email) {
         this.name = name;
         this.description = description;
+        this.email=email;
     }
 
     public Project() {
@@ -55,5 +61,12 @@ public class Project  {
 
     public Long getId() {
         return id;
+    }
+
+    public String getEmail(){
+        return this.email;
+    }
+    public void setEmail(String email){
+        this.email=email;
     }
 }
