@@ -7,11 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/camundaworkflow</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="yrsugaqs@tai.db.elephantsql.com" uuid="cc40b7b7-9903-4237-b722-8d37ede4d8ee">
+    <data-source source="LOCAL" name="camundaworkflow@localhost [2]" uuid="7ca63a21-6b6e-4fa7-af4d-207fc4a5b85e">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://tai.db.elephantsql.com/yrsugaqs</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/camundaworkflow</jdbc-url>
     </data-source>
   </component>
 </project>

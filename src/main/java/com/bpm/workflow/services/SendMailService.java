@@ -18,14 +18,13 @@ public class SendMailService implements ISendMailService {
 
     @Override
     public void sendMail(Mail mail) {
-        SimpleMailMessage  msg = new SimpleMailMessage();
 
+        SimpleMailMessage  msg = new SimpleMailMessage();
         msg.setTo(mail.getRecipient(), mail.getRecipient());
         mail.setSubject(mail.getSubject());
         msg.setText(mail.getMessage());
 
         javaMailSender.send(msg);
     }
-
 
 }
