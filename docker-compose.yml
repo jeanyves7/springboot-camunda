@@ -17,8 +17,7 @@ services:
 
   postgres:
     image: postgres:latest
-    network_mode: bridge
-    container_name: postgres
+    network_mode:   : postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
     restart: unless-stopped

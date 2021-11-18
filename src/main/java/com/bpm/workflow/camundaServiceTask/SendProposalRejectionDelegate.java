@@ -25,7 +25,7 @@ public class SendProposalRejectionDelegate implements JavaDelegate {
         LOGGER.info("Getting rejected project info: ");
         Project project = TaskHelper.getProject(delegateExecution);
         LOGGER.info(String.format("Project %s was rejected, proceeding to send rejection email to %s", project.getName(), project.getEmail()));
-        Mail mail = new Mail(project.getEmail(), "", "");
+        Mail mail = TaskHelper.buildMailTosend(project.getEmail(), "", "");
         if ((boolean) delegateExecution.getVariable("isAdded")) {
             LOGGER.info(String.format("Project %s was rejected it wasn't valid", project.getName()));
             mail.setSubject("Project Validation Failure");

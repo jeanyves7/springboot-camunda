@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1dkgkae" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.11.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:process id="sendOnDate" name="sendOnDate" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1g8gxey</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_00esh57">
+        <bpmn:timeDate xsi:type="bpmn:tFormalExpression">2021-11-29T22:00:00</bpmn:timeDate>
+      </bpmn:timerEventDefinition>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_1unlnjf" name="Process endend">
+      <bpmn:incoming>Flow_052yyjb</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_052yyjb" sourceRef="Activity_01p4weh" targetRef="Event_1unlnjf" />
+    <bpmn:serviceTask id="Activity_01p4weh" name="send Approved proposal" camunda:class="com.bpm.workflow.camundaServiceTask.sendApprovedProjects">
+      <bpmn:incoming>Flow_1g8gxey</bpmn:incoming>
+      <bpmn:outgoing>Flow_052yyjb</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1g8gxey" name="we reached the time to send the emais" sourceRef="StartEvent_1" targetRef="Activity_01p4weh" />
+    <bpmn:textAnnotation id="TextAnnotation_0n9rft4">
+      <bpmn:text>Timer based signal</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0v2bk84" sourceRef="StartEvent_1" targetRef="TextAnnotation_0n9rft4" />
+    <bpmn:textAnnotation id="TextAnnotation_16f2rls">
+      <bpmn:text>Sending to all students that have their project approved</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_17tjntx" sourceRef="Activity_01p4weh" targetRef="TextAnnotation_16f2rls" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="sendOnDate">
+      <bpmndi:BPMNShape id="TextAnnotation_0n9rft4_di" bpmnElement="TextAnnotation_0n9rft4">
+        <dc:Bounds x="200" y="80" width="100" height="40" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_16f2rls_di" bpmnElement="TextAnnotation_16f2rls">
+        <dc:Bounds x="530" y="368" width="100" height="82" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_052yyjb_di" bpmnElement="Flow_052yyjb">
+        <di:waypoint x="570" y="280" />
+        <di:waypoint x="802" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g8gxey_di" bpmnElement="Flow_1g8gxey">
+        <di:waypoint x="198" y="187" />
+        <di:waypoint x="334" y="187" />
+        <di:waypoint x="334" y="280" />
+        <di:waypoint x="470" y="280" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="341" y="180" width="78" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_0shho14_di" bpmnElement="Activity_01p4weh">
+        <dc:Bounds x="470" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_034o1u3_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="162" y="169" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1unlnjf_di" bpmnElement="Event_1unlnjf">
+        <dc:Bounds x="802" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="780" y="305" width="80" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_0v2bk84_di" bpmnElement="Association_0v2bk84">
+        <di:waypoint x="191" y="173" />
+        <di:waypoint x="231" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_17tjntx_di" bpmnElement="Association_17tjntx">
+        <di:waypoint x="543" y="320" />
+        <di:waypoint x="571" y="368" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

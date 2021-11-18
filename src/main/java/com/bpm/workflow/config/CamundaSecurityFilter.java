@@ -1,7 +1,8 @@
 package com.bpm.workflow.config;
-
+//
 //import javax.servlet.Filter;
 //import org.camunda.bpm.engine.rest.security.auth.ProcessEngineAuthenticationFilter;
+//import org.camunda.bpm.engine.rest.security.auth.impl.HttpBasicAuthenticationProvider;
 //import org.springframework.boot.web.servlet.FilterRegistrationBean;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
@@ -10,14 +11,12 @@ package com.bpm.workflow.config;
 //public class CamundaSecurityFilter {
 //
 //  @Bean
-//  public FilterRegistrationBean<Filter> processEngineAuthenticationFilter() {
-//    FilterRegistrationBean<Filter> registration = new FilterRegistrationBean<>();
+//  public FilterRegistrationBean processEngineAuthenticationFilter() {
+//    FilterRegistrationBean registration = new FilterRegistrationBean();
 //    registration.setName("camunda-auth");
-//    registration.setFilter(getProcessEngineAuthenticationFilter());
-//    registration.addInitParameter("authentication-provider",
-//        "org.camunda.bpm.engine.rest.security.auth.impl.HttpBasicAuthenticationProvider");
+//    registration.setFilter(new ProcessEngineAuthenticationFilter());
+//    registration.addInitParameter("authentication-provider", HttpBasicAuthenticationProvider.class.getName());
 //    registration.addUrlPatterns("/*");
-//    registration.setOrder(1);
 //    return registration;
 //  }
 //
@@ -26,4 +25,4 @@ package com.bpm.workflow.config;
 //    return new ProcessEngineAuthenticationFilter();
 //  }
 //}
-
+//

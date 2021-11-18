@@ -67,4 +67,8 @@ public class Project {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public boolean getIsValidated(){
+        return this.isValidated;
+    }
 }

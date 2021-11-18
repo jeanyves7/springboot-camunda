@@ -8,5 +8,4 @@ public interface ISendMailService {
 
     void sendMail(Mail mail);
 
-
 }

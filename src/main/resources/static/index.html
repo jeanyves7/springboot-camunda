@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Simple registration form</title>
-    <script type = "text/javascript" src="addProject.js"></script>
+    <script type = "text/javascript" src="projectFunctions.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <style>
@@ -143,9 +143,13 @@
         <input type="text" name="names" id="Email" placeholder="Email" />
         <hr>
         <div class="btn-block">
-            <button  onclick = "sendPost(document.getElementById('Names'),document.getElementById('desc'),document.getElementById('Email'))">Submit</button>
+            <button  onclick = "addProject(document.getElementById('Names'),document.getElementById('desc'),document.getElementById('Email'))">Submit</button>
         </div>
+
     </form>
+    <div class="btn-block">
+        <button onclick="location.href='/camundapostgres/static/loginFile.html'" >Log In</button>
+    </div>
 </div>
 </body>
 </html>
