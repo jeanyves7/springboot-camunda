@@ -1,6 +1,7 @@
 package com.bpm.workflow.camundaServiceTask;
 
 import com.bpm.workflow.Helpers.TaskHelper;
+import com.bpm.workflow.Repositories.ProjectsRepository;
 import com.bpm.workflow.dto.Mail;
 import com.bpm.workflow.dto.Project;
 import com.bpm.workflow.services.SendMailService;
@@ -8,6 +9,7 @@ import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -19,6 +21,9 @@ public class SendProposalRejectionDelegate implements JavaDelegate {
     public SendProposalRejectionDelegate(SendMailService sendMailService) {
         this.sendMailService = sendMailService;
     }
+
+    @Autowired
+    ProjectsRepository projectsRepository;
 
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
@@ -35,6 +40,7 @@ public class SendProposalRejectionDelegate implements JavaDelegate {
             mail.setSubject("Project Invalid Parameters");
             mail.setMessage("Your project was rejected due to invalid parameters in the request please be more careful next time you submit a project");
         }
+        this.projectsRepository.updateNotificationStatus(mail.getRecipient());
         sendMailService.sendMail(mail);
     }
 }

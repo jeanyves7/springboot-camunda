@@ -20,6 +20,9 @@ public class Project {
     @Column(name = "isvalidated")
     private boolean isValidated = false;
 
+    @Column(name = "notified")
+    private boolean notified = false;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -70,5 +73,13 @@ public class Project {
 
     public boolean getIsValidated(){
         return this.isValidated;
+    }
+
+    public boolean getNotified(){
+        return this.notified;
+    }
+
+    public void setNotified(boolean notified){
+        this.notified=notified;
     }
 }

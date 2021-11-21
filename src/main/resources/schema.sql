@@ -4,5 +4,6 @@ Create TABLE IF NOT EXISTS project(
     description varchar (1000),
     email varchar (50),
     isvalidated BOOLEAN,
+    notified BOOLEAN,
     primary key (id,name)
 );

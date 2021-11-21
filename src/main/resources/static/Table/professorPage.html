@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professor</title>
+    <script type = "text/javascript" src="getData.js"></script>
+    <style>
+        .show {
+           background: #9fcdff;
+            margin: 10px;
+        }
+        .send{
+            background: #28a745;
+            color: white;
+            margin: 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <meta name="robots" content="noindex, follow">
+</head>
+<body>
+
+<div class="limiter">
+    <div class="container-table100">
+        <div class="show">
+            <button onclick="create()">ShowTable</button>
+
+        </div>
+        <div class="send">
+            <button class="send" onclick="sendNotification()">sendNotification</button>
+        </div>
+        <div class="wrap-table100">
+            <div class="table100">
+                <table id="tableApproved">
+                    <thead>
+                    <tr class="table100-head">
+                        <th class="column1">Id</th>
+                        <th class="column2">Name</th>
+                        <th class="column3">Description</th>
+                        <th class="column4">Validated</th>
+                        <th class="column5">Notified</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="vendor/select2/select2.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v64f9daad31f64f81be21cbef6184a5e31634941392597" integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A==" data-cf-beacon='{"rayId":"6b1ab97699a97336","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.11.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -39,6 +39,7 @@ public class sendApprovedProjects implements JavaDelegate {
         while (i<projectsApproved.size()){
             Mail mail= TaskHelper.buildMailTosend(projectsApproved.get(i).getEmail(),"Porposal Approved!",this.Approved_Message);
             this.sendMailService.sendMail(mail);
+            this.projectsRepository.updateNotificationStatus(mail.getRecipient());
             i+=1;
         }
         LOGGER.info("All email for approved projects are sent ");

@@ -34,7 +34,6 @@ public class AddProjectDelegate implements JavaDelegate {
             this.projectsRepository.save(project);
             delegateExecution.setVariable("isAdded", true);
 
-
         } else {
             LOGGER.info("Project parameters are not valid");
             delegateExecution.setVariable("isAdded", false);
