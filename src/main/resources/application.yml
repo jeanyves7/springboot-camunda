@@ -3,7 +3,7 @@
 spring:
   mail:
     host: smtp.gmail.com
-    port: 465
+    port: 587
     username: mdptwitter20@gmail.com
     password: CamundaBoot1%
     properties:
@@ -13,10 +13,13 @@ spring:
           connectiontimeout: 5000
           timeout: 5000
           writetimeout: 5000
-
+          starttls:
+            enable: true
   application:
     name: camundapostgres
 
+  profiles:
+    active: local
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
