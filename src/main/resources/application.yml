@@ -1,12 +1,10 @@
-server:
-  port: 8088
 
 spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: mdptwitter20@gmail.com
-    password: CamundaBoot1%
+    username: ${SMTP_ADDRESS}
+    password: ${SMTP_PASSWORD}
     properties:
       mail:
         smtp:
@@ -19,8 +17,6 @@ spring:
   application:
     name: camundapostgres
 
-  profiles:
-    active: local
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
@@ -28,14 +24,14 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://ec2-54-72-136-69.eu-west-1.compute.amazonaws.com/dftrpijg3lo516
-    username: gagemxnwsjvhwj
-    password: a795e8a0ee016932e68c211fda31e668ed932438d67bc9645e72b2ca9c048962
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
 
     
     hikari:
       jdbc-url: jdbc:postgresql://ec2-54-72-136-69.eu-west-1.compute.amazonaws.com/dftrpijg3lo516
-      username: gagemxnwsjvhwj
-      password: a795e8a0ee016932e68c211fda31e668ed932438d67bc9645e72b2ca9c048962
+      username: ${DB_USER}
+      password: ${DB_PASSWORD}
       driver-class-name: org.postgresql.Driver
       pool-name: CAMUNDA-HIKARI-POOL
       idle-timeout: 3000
