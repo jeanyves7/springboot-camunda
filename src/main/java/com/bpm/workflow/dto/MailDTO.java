@@ -1,15 +1,15 @@
 package com.bpm.workflow.dto;
 
-public class Mail {
+public class MailDTO {
 
     private String recipient;
     private String subject;
     private String message;
 
-    public Mail() {
+    public MailDTO() {
     }
 
-    public Mail(String recipient, String subject, String message) {
+    public MailDTO(String recipient, String subject, String message) {
         this.recipient = recipient;
         this.subject = subject;
         this.message = message;

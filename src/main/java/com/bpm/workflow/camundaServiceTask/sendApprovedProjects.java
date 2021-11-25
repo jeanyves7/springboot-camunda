@@ -2,7 +2,7 @@ package com.bpm.workflow.camundaServiceTask;
 
 import com.bpm.workflow.Helpers.TaskHelper;
 import com.bpm.workflow.Repositories.ProjectsRepository;
-import com.bpm.workflow.dto.Mail;
+import com.bpm.workflow.dto.MailDTO;
 import com.bpm.workflow.dto.Project;
 import com.bpm.workflow.services.SendMailService;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
@@ -37,7 +37,7 @@ public class sendApprovedProjects implements JavaDelegate {
         List<Project> projectsApproved = this.projectsRepository.findAll().stream().filter(Project::getIsValidated).collect(Collectors.toList());
         int i=0;
         while (i<projectsApproved.size()){
-            Mail mail= TaskHelper.buildMailTosend(projectsApproved.get(i).getEmail(),"Porposal Approved!",this.Approved_Message);
+            MailDTO mail= TaskHelper.buildMailTosend(projectsApproved.get(i).getEmail(),"Porposal Approved!",this.Approved_Message);
             this.sendMailService.sendMail(mail);
             this.projectsRepository.updateNotificationStatus(mail.getRecipient());
             i+=1;

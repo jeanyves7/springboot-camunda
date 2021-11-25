@@ -1,6 +1,6 @@
 package com.bpm.workflow.Helpers;
 
-import com.bpm.workflow.dto.Mail;
+import com.bpm.workflow.dto.MailDTO;
 import com.bpm.workflow.dto.Project;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 
@@ -43,9 +43,8 @@ public class TaskHelper {
         return isValidEmailAddress(email);
     }
 
-    public static Mail buildMailTosend(String recepient,String subject,String message){
-        return new Mail(recepient,recepient,message);
+    public static MailDTO buildMailTosend(String recepient, String subject, String message){
+        return new MailDTO(recepient,recepient,message);
     }
-
 
 }
