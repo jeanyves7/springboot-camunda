@@ -43,7 +43,7 @@
         }
         .main-block {
             max-width: 340px;
-            min-height: 460px;
+            min-height: 400px;
             padding: 10px 0;
             margin: auto;
             border-radius: 5px;
@@ -125,7 +125,7 @@
             text-align: center;
         }
         button {
-            width: 100%;
+            width: 80%;
             padding: 10px 0;
             margin: 10px auto;
             border-radius: 5px;
@@ -134,9 +134,42 @@
             font-size: 14px;
             font-weight: 600;
             color: #fff;
+            cursor: pointer;
         }
         button:hover {
             background: #26a9e0;
+        }
+        .m30 {
+            margin: 0 30px;
+        }
+        .strike {
+            display: block;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #666;
+        }
+        .strike > span {
+            position: relative;
+            display: inline-block;
+        }
+        .strike > span:before,
+        .strike > span:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 9999px;
+            height: 1px;
+            background: #a9a9a9;
+            opacity: 0.3;
+        }
+        .strike > span:before {
+            right: 100%;
+            margin-right: 15px;
+        }
+        .strike > span:after {
+            left: 100%;
+            margin-left: 15px;
         }
     </style>
 </head>
@@ -150,13 +183,14 @@
         <label id="icon" for="desc"><i class="fas fa-user"></i></label>
         <input type="text" name="desc" id="desc" placeholder="Description" />
         <input type="text" name="names" id="Email" placeholder="Email" />
-        <hr>
         <div class="btn-block">
             <button  onclick = "addProject(document.getElementById('Names'),document.getElementById('desc'),document.getElementById('Email'))">Submit</button>
         </div>
-
+        <div class="strike">
+            <span>or</span>
+        </div>
     </form>
-    <div class="btn-block">
+    <div class="btn-block m30">
         <button onclick="location.href='/loginFile.html'" >Log In</button>
     </div>
 </div>
