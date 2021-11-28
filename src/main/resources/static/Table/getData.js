@@ -15,8 +15,6 @@ function createTable(tableData) {
     });
 
     table.appendChild(tableBody);
-
-    // document.body.appendChild(table);
 }
 
 
@@ -33,6 +31,7 @@ function create(){
     });
 
     createTable(result);
+    document.getElementById("show-btn").disabled = true;
 }
 
 function sendNotification(){
