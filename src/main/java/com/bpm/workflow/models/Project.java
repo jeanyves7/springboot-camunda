@@ -1,4 +1,4 @@
-package com.bpm.workflow.dto;
+package com.bpm.workflow.models;
 
 
 import javax.persistence.*;
