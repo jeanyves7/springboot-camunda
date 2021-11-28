@@ -11,9 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UpdateApprovalStatus implements JavaDelegate {
+public class UpdateApprovalStatusDelegate implements JavaDelegate {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(UpdateApprovalStatus.class.getName());
+    private final Logger LOGGER = LoggerFactory.getLogger(UpdateApprovalStatusDelegate.class.getName());
 
     @Autowired
     ProjectsRepository projectsRepository;
@@ -21,8 +21,8 @@ public class UpdateApprovalStatus implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
         Project project= TaskHelper.getProject(delegateExecution);
-        LOGGER.info(String.format("Updating status of project's %s ",project.getName()));
+        LOGGER.info(String.format("Updating status of  %s's project",project.getName()));
         projectsRepository.updateProjectApprovalStatus(project.getName(),true);
-        LOGGER.info(String.format("Update done, %s is approved",project.getName()));
+        LOGGER.info(String.format("Update done, project of %s is approved",project.getName()));
     }
 }

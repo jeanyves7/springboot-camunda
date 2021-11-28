@@ -50,7 +50,7 @@
       <bpmn:incoming>Flow_11j7g1o</bpmn:incoming>
       <bpmn:outgoing>Flow_0le6f5e</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_1kfqrsp" name="Update Proposal status" camunda:class="com.bpm.workflow.camundaServiceTask.UpdateApprovalStatus">
+    <bpmn:serviceTask id="Activity_1kfqrsp" name="Update Proposal status" camunda:class="com.bpm.workflow.camundaServiceTask.UpdateApprovalStatusDelegate">
       <bpmn:incoming>Flow_0b0whyu</bpmn:incoming>
       <bpmn:outgoing>Flow_1wfstbe</bpmn:outgoing>
     </bpmn:serviceTask>

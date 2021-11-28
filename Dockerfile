@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-EXPOSE 9099
+EXPOSE 8088
 RUN mkdir -p /app/
 RUN mkdir -p /app/logs/
 ADD target/camunda-docker.jar /app/app.jar

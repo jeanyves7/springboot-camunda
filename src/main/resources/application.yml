@@ -27,13 +27,13 @@ spring:
     
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://postgres:5432/camundawork
+    url: jdbc:postgresql://postgres:5432/postgres
     username: docker
     password: docker
 
     
     hikari:
-      jdbc-url:  jdbc:postgresql://postgres:5432/camundawork
+      jdbc-url:  jdbc:postgresql://postgres:5432/postgres
       username: docker
       password: docker
       driver-class-name: org.postgresql.Driver
@@ -51,5 +51,5 @@ camunda:
     admin-user:
       id: demo
       password: demo
-    
+    auto-deployment-enabled: true
 

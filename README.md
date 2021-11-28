@@ -34,6 +34,7 @@ Below softwares need to be installed in the system before running this applicati
 | Postgres | 9 |
 | Maven | 3.6.x |
 | Spring Tool Suite | 4 |
+| Docker| 20.10.10|
 
 ### Run this application
 
@@ -41,21 +42,33 @@ Below softwares need to be installed in the system before running this applicati
     ```sh
     git clone https://github.com/jeanyves7/springboot-camunda.git
     ```
+
+- navigate to the folder containing the cloned folder
+  
 - Run this command from command prompt:
     ```sh
     mvn clean install
     ```
+
+-  Building the springboot image
+    ````sh
+    docker build ./ -t camundaworks
+   ````
+- Running the springboot and postgres in a container   
+    ````sh
+    docker-compose up
+   ````
 - Import the project as existing maven project
 
 - Before run local 
      ```sh
-       change the url database to localhost instead of postgres   
+       make sure you have postgresql database running  
         
 - Run as Spring boot application from STS IDE.
 
 - From the browser access the cockpit as:
     ```sh
-    http://localhost:9099
+    http://localhost:8088
     ```
 - It will prompt the popup for basic auth since we enabled camunda basic auth. Input the credentials as: 
     ```sh
@@ -63,7 +76,7 @@ Below softwares need to be installed in the system before running this applicati
     ```
 - Camunda rest api will be accessed like:
     ```sh
-    http://localhost:9091/engine-rest/engine
+    http://localhost:8088/engine-rest/engine
     ```
 - Camunda rest api authorization details are:
     ```sh

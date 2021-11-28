@@ -32,6 +32,7 @@ function create(){
     });
 
     createTable(result);
+    document.getElementById("show-btn").disabled = true;
 }
 
 function sendNotification(){

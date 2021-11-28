@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class sendApprovedProjects implements JavaDelegate {
 
     private final Logger LOGGER = LoggerFactory.getLogger(sendApprovedProjects.class.getName());
-    private final String Approved_Message = "Congratulations!\n, your project has been approved please wait to get more info for the next step\n\n Best Regards,Fyp Comity";
+    private final String Approved_Message = "Congratulations!,\n your project has been approved please wait to get more info for the next step\n\n Best Regards,\nFyp Committee";
     private final SendMailService sendMailService;
 
 
@@ -34,13 +34,13 @@ public class sendApprovedProjects implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
         LOGGER.info("Beginning to send the approved projects ");
-        List<Project> projectsApproved = this.projectsRepository.findAll().stream().filter(Project::getIsValidated).collect(Collectors.toList());
+        List<Project> projectsApproved = this.projectsRepository.findAllProjectsToSend();
         int i=0;
         while (i<projectsApproved.size()){
             MailDTO mail= TaskHelper.buildMailTosend(projectsApproved.get(i).getEmail(),"Porposal Approved!",this.Approved_Message);
             this.sendMailService.sendMail(mail);
             this.projectsRepository.updateNotificationStatus(mail.getRecipient());
-            i+=1;
+           i++;
         }
         LOGGER.info("All email for approved projects are sent ");
     }

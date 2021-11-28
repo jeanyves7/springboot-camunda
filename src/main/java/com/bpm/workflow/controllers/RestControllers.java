@@ -33,7 +33,8 @@ public class RestControllers {
 
     @GetMapping("projects")
     public List<Project> GetAllProjects(){
-    return this.projectsRepository.findAll();
+        LOGGER.info("Getting the list of all the projects");
+        return this.projectsRepository.findAll();
     }
 
 }
