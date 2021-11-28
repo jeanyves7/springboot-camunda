@@ -16,7 +16,7 @@ public class ValidateProjectDelegate implements JavaDelegate {
 
     private final Logger LOGGER = LoggerFactory.getLogger(AddProjectDelegate.class.getName());
 
-    private static final LocalDate deadline = LocalDate.of(2021, 11, 25);
+    private static final LocalDate deadline = LocalDate.of(2021, 12, 30);
 
 
     @Override
