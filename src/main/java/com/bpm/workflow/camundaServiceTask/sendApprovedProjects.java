@@ -18,7 +18,9 @@ import java.util.List;
 public class sendApprovedProjects implements JavaDelegate {
 
     private final Logger LOGGER = LoggerFactory.getLogger(sendApprovedProjects.class.getName());
+
     private final String Approved_Message = "Congratulations!,\n your project has been approved please wait to get more info for the next step\n\n Best Regards,\nFyp Committee";
+
     private final SendMailService sendMailService;
 
 
@@ -39,7 +41,8 @@ public class sendApprovedProjects implements JavaDelegate {
             MailDTO mail= TaskHelper.buildMailTosend(projectsApproved.get(i).getEmail(),"Porposal Approved!",this.Approved_Message);
             this.sendMailService.sendMail(mail);
             this.projectsRepository.updateNotificationStatus(mail.getRecipient());
-           i++;
+
+            i++;
         }
         LOGGER.info("All email for approved projects are sent ");
     }

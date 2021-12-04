@@ -15,7 +15,6 @@ function createTable(tableData) {
     });
 
     table.appendChild(tableBody);
-
 }
 
 
