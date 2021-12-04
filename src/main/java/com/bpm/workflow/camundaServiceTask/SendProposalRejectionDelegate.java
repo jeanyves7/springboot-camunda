@@ -2,8 +2,8 @@ package com.bpm.workflow.camundaServiceTask;
 
 import com.bpm.workflow.Helpers.TaskHelper;
 import com.bpm.workflow.Repositories.ProjectsRepository;
-import com.bpm.workflow.dto.MailDTO;
-import com.bpm.workflow.dto.Project;
+import com.bpm.workflow.models.MailDTO;
+import com.bpm.workflow.models.Project;
 import com.bpm.workflow.services.SendMailService;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;

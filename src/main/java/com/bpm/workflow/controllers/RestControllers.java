@@ -2,7 +2,7 @@ package com.bpm.workflow.controllers;
 
 
 import com.bpm.workflow.Repositories.ProjectsRepository;
-import com.bpm.workflow.dto.Project;
+import com.bpm.workflow.models.Project;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
