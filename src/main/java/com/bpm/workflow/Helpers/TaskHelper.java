@@ -1,7 +1,7 @@
 package com.bpm.workflow.Helpers;
 
-import com.bpm.workflow.dto.Mail;
-import com.bpm.workflow.dto.Project;
+import com.bpm.workflow.models.MailDTO;
+import com.bpm.workflow.models.Project;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 
 import javax.mail.internet.AddressException;
@@ -45,6 +45,6 @@ public class TaskHelper {
 
     public static Mail buildMailTosend(String recipient,String subject,String message){
         return new Mail(recipient,subject,message);
-    }
+
 
 }

@@ -47,5 +47,5 @@ camunda:
     admin-user:
       id: demo
       password: demo
-    
+    auto-deployment-enabled: true
 

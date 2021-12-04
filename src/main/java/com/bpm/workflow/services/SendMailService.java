@@ -1,11 +1,13 @@
 package com.bpm.workflow.services;
 
-import com.bpm.workflow.dto.Mail;
+import com.bpm.workflow.models.MailDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+
+import java.io.IOException;
 
 @Service
 public class SendMailService implements ISendMailService {
@@ -19,17 +21,17 @@ public class SendMailService implements ISendMailService {
     }
 
     @Override
-    public void sendMail(Mail mail) {
+    public void sendMail(MailDTO mailDTO) throws IOException {
 
-        LOGGER.info(String.format("Sending email to %s",mail.getRecipient()));
+        LOGGER.info(String.format("Sending email to %s",mailDTO.getRecipient()));
+
         SimpleMailMessage  msg = new SimpleMailMessage();
-        msg.setTo(mail.getRecipient(), mail.getRecipient());
-        mail.setSubject(mail.getSubject());
-        msg.setText(mail.getMessage());
+        msg.setTo(mailDTO.getRecipient(), mailDTO.getRecipient());
+        mailDTO.setSubject(mailDTO.getSubject());
+        msg.setText(mailDTO.getMessage());
         javaMailSender.send(msg);
-        LOGGER.info(String.format("Email sent to %s",mail.getRecipient()));
-    }
 
+    }
 
 
 }

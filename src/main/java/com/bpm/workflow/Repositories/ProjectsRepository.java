@@ -1,8 +1,7 @@
 package com.bpm.workflow.Repositories;
 
 
-import com.bpm.workflow.dto.Project;
-import org.springframework.data.domain.Example;
+import com.bpm.workflow.models.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

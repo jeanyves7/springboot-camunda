@@ -15,7 +15,9 @@ function addProject(name, description, email) {
     xhr.send(JSON.stringify({
         variables
     }));
-    window.alert("Your project has been successfully added!");
+
+    window.alert("Your project has been submitted successfully");
+
 }
 
 function checkCredentials(userName,userPassword){
@@ -26,8 +28,10 @@ function checkCredentials(userName,userPassword){
 
     if(xmlHttp.responseText==="true"){
      document.location.href="/Table/professorPage.html";
-    } else{
-        window.alert("Your credentials are invalid!");
+
+    }else{
+        window.alert("Your Credentials doesn't match");
     }
 }
+
 
