@@ -24,4 +24,8 @@ public interface ProjectsRepository extends JpaRepository<Project,Long> {
     @Query("update Project p set p.notified = true where p.email = ?1")
     void updateNotificationStatus(String email);
 
+    @Modifying
+    @Query("SELECT p from Project p where p.notified=false and p.isValidated=true ")
+    List<Project> findAllProjectsToSend();
+
 }
