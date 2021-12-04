@@ -43,8 +43,8 @@ public class TaskHelper {
         return isValidEmailAddress(email);
     }
 
-    public static MailDTO buildMailTosend(String recepient, String subject, String message){
-        return new MailDTO(recepient,recepient,message);
+    public static MailDTO buildMailTosend(String recipient, String subject, String message){
+        return new MailDTO(recipient,subject,message);
     }
 
 }
