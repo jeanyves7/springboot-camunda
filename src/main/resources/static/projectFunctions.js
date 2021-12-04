@@ -15,6 +15,7 @@ function addProject(name, description, email) {
     xhr.send(JSON.stringify({
         variables
     }));
+    window.alert("Your project has been successfully added!");
 }
 
 function checkCredentials(userName,userPassword){
@@ -25,36 +26,8 @@ function checkCredentials(userName,userPassword){
 
     if(xmlHttp.responseText==="true"){
      document.location.href="/Table/professorPage.html";
+    } else{
+        window.alert("Your credentials are invalid!");
     }
-}
-
-function createTable(tableData) {
-    var table = document.getElementById('tableApproved');
-    var tableBody = document.createElement('tbody');
-
-    tableData.forEach(function(rowData) {
-        var row = document.createElement('tr');
-
-        rowData.forEach(function(cellData) {
-            var cell = document.createElement('td');
-            cell.appendChild(document.createTextNode(cellData));
-            row.appendChild(cell);
-        });
-
-        tableBody.appendChild(row);
-    });
-
-    table.appendChild(tableBody);
-
-    // document.body.appendChild(table);
-}
-function create(){
-    var theUrl=window.location.origin+"/api/camunda/projects";
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-
-
-    createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
 }
 
