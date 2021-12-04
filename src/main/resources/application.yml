@@ -23,15 +23,14 @@ spring:
     
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://ec2-54-72-136-69.eu-west-1.compute.amazonaws.com/dftrpijg3lo516
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
-
+    url: jdbc:postgresql://localhost:5432/camundaworkflow
+    username: docker
+    password: docker
     
     hikari:
-      jdbc-url: jdbc:postgresql://ec2-54-72-136-69.eu-west-1.compute.amazonaws.com/dftrpijg3lo516
-      username: ${DB_USER}
-      password: ${DB_PASSWORD}
+      jdbc-url: jdbc:postgresql://localhost:5432/camundaworkflow
+      username: docker
+      password: docker
       driver-class-name: org.postgresql.Driver
       pool-name: CAMUNDA-HIKARI-POOL
       idle-timeout: 3000
