@@ -1,6 +1,6 @@
 package com.bpm.workflow.services;
 
-import com.bpm.workflow.dto.MailDTO;
+import com.bpm.workflow.models.MailDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.mail.SimpleMailMessage;

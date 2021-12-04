@@ -1,6 +1,6 @@
 package com.bpm.workflow.services;
 
-import com.bpm.workflow.dto.MailDTO;
+import com.bpm.workflow.models.MailDTO;
 
 import java.io.IOException;
 

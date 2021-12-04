@@ -1,7 +1,7 @@
 package com.bpm.workflow.Helpers;
 
-import com.bpm.workflow.dto.MailDTO;
-import com.bpm.workflow.dto.Project;
+import com.bpm.workflow.models.MailDTO;
+import com.bpm.workflow.models.Project;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 
 import javax.mail.internet.AddressException;
