@@ -1,7 +1,7 @@
 ![Java CI with Maven](https://github.com/aravindhrs/camunda-springboot-postgres/workflows/Java%20CI%20with%20Maven/badge.svg) ![CodeQL](https://github.com/aravindhrs/camunda-springboot-postgres/workflows/CodeQL/badge.svg)
 
 ### Run this application
-
+- Pleasenote that the login credentials are the following: Username:admin Password:admin
 - You can access the deployed camunda-boot app via this URL
    ```sh
     https://camunda-boot-poc.herokuapp.com/index.html
